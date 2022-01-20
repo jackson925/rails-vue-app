@@ -1,0 +1,155 @@
+
+
+<div class="min-h-full flex-column justify-center py-12 px-4 sm:px-6 lg:px-8">
+<div class="min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+  <%= image_tag "bundle-logo.svg", class: "mx-auto h-16 w-auto"  %>
+</div>
+<div class="min-h-full flex items-center justify-center">
+<div class="max-w-lg rounded overflow-hidden border-solid border-2 border-slate-100 py-10 px-12 bg-white">
+  <div class="max-w-md w-full space-y-10">
+    <div>
+      <h2 class="mt-3 text-xl font-extrabold text-gray-900">
+        Create a new account
+      </h2>
+    </div>
+    <form class="mt-8 space-y-6" action="/users/sign_in" method="POST">
+      <%= token_tag nil %>
+      <div class="rounded-md shadow-sm -space-y-px">
+        <div>
+          <label for="email-address" class="py-2 text-xs">Email address *</label>
+          <input id="email-address" name="user[email]" type="email" autocomplete="email" required class="mb-3 appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Email address">
+        </div>
+        <div>
+          <label for="password" class="py-2 text-xs">Password *</label>
+          <input id="password" name="user[password]" type="password" autocomplete="current-password" required class="mb-3 appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Password">
+        </div>
+        <div>
+          <label for="first_name" class="py-2 text-xs">First name *</label>
+          <input id="first_name" name="user[first_name]" type="name" required class="mb-3 appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Password">
+        </div>
+        <div>
+          <label for="last_name" class="py-2 text-xs">Last name *</label>
+          <input id="last_name" name="user[last_name]" type="name" required class="mb-3 appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Password">
+        </div>
+        <div>
+           <label for="company_name" class="py-2 text-xs">Company name *</label>
+            <input id="company_name" name="user[company]" type="name" required class="mb-3 appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Password">
+        </div>
+        <div>
+        <label for="customer_type" class="py-2 text-xs">Builder or Supplier? *</label>
+        <div class="flex justify-start">
+          <div class="mb-3 w-full">
+            <select
+             id="customer_type" 
+             required 
+             name="user[customer_type]"
+             class="form-select appearance-none
+              block
+              rounded-none 
+              relative  
+              border 
+              border-gray-300 
+              w-full
+              px-3
+              py-1.5
+              font-normal
+              text-gray-700
+              bg-white bg-clip-padding bg-no-repeat
+              border border-solid border-gray-300
+              rounded
+              transition
+              ease-in-out
+              m-0
+              focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
+                <option selected>Choose from dropdown menu</option>
+                <option value="1">Builder</option>
+                <option value="2">Supplier</option>
+            </select>
+          </div>
+        </div>
+          </div>
+          <div>
+           <label for="annual_projects" class="py-2 text-xs">Estimated annual number of projects *</label>
+           <div class="flex justify-start">
+           <div class="mb-3 w-full">
+               <select
+                id="annual_projects" 
+                required 
+                name="user[annual_projects]"
+                class="form-select appearance-none
+                 block
+                 rounded-none 
+                 relative  
+                 border 
+                 border-gray-300 
+                 w-full
+                 px-3
+                 py-1.5
+                 font-normal
+                 text-gray-700
+                 bg-white bg-clip-padding bg-no-repeat
+                 border border-solid border-gray-300
+                 rounded
+                 transition
+                 ease-in-out
+                 m-0
+                 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
+                   <option selected>Choose from dropdown menu</option>
+               </select>
+             </div>
+           </div>
+        </div>
+        <div>
+            <label for="annual_products" class="py-2 text-xs">Estimated annual amount of products purchased *</label>
+            <div class="flex justify-start">
+            <div class="mb-3 w-full">
+                <select
+                 id="annual_products" 
+                 required 
+                 name="user[annual_products]"
+                 class="form-select appearance-none
+                  block
+                  rounded-none 
+                  relative  
+                  border 
+                  border-gray-300 
+                  w-full
+                  px-3
+                  py-1.5
+                  font-normal
+                  text-gray-700
+                  bg-white bg-clip-padding bg-no-repeat
+                  border border-solid border-gray-300
+                  rounded
+                  transition
+                  ease-in-out
+                  m-0
+                  focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
+                    <option selected>Choose from dropdown menu</option>
+                </select>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="flex items-center">
+         <input id="agree" name="user[agree]" type="checkbox" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
+          <label for="agree" class="ml-2 block text-xs text-gray-900">
+           I agree to the Bundle Terms of Service and Privacy Policy
+          </label>
+       </div>
+      <div>
+        <button type="submit" class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          <span class="absolute left-0 inset-y-0 flex items-center pl-3">
+            <!-- Heroicon name: solid/lock-closed -->
+            <svg class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+            </svg>
+          </span>
+          Sign in
+        </button>
+      </div>
+    </form>
+  </div>
+  </div>
+  </div>
+</div>
