@@ -12,7 +12,7 @@
         Create a new account
       </h2>
     </div>
-    <form class="mt-8 space-y-6" action="/users/sign_in" method="POST">
+    <form class="mt-8 space-y-6" action="/users/sign_up" method="POST">
       <%= token_tag nil %>
       <div class="rounded-md shadow-sm -space-y-px">
         <div>
@@ -25,15 +25,15 @@
         </div>
         <div>
           <label for="first_name" class="py-2 text-xs">First name *</label>
-          <input id="first_name" name="user[first_name]" type="name" required class="mb-3 appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Password">
+          <input id="first_name" name="user[first_name]" type="name" required class="mb-3 appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="First name">
         </div>
         <div>
           <label for="last_name" class="py-2 text-xs">Last name *</label>
-          <input id="last_name" name="user[last_name]" type="name" required class="mb-3 appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Password">
+          <input id="last_name" name="user[last_name]" type="name" required class="mb-3 appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Last name">
         </div>
         <div>
            <label for="company_name" class="py-2 text-xs">Company name *</label>
-            <input id="company_name" name="user[company]" type="name" required class="mb-3 appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Password">
+            <input id="company_name" name="user[company]" type="name" required class="mb-3 appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Company name">
         </div>
         <div>
         <label for="customer_type" class="py-2 text-xs">Builder or Supplier? *</label>
@@ -94,7 +94,11 @@
                  ease-in-out
                  m-0
                  focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
-                   <option selected>Choose from dropdown menu</option>
+                   <option selected>Choose annual estimated projects</option>
+                   <option value="1">0 - 9 projects/yr</option>
+                   <option value="10">> 10 projects/yr</option>
+                   <option value="100">> 100 projects/yr</option>
+                   <option value="1000">> 1000 projects/yr</option>
                </select>
              </div>
            </div>
@@ -125,7 +129,11 @@
                   ease-in-out
                   m-0
                   focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example">
-                    <option selected>Choose from dropdown menu</option>
+                    <option selected>Choose annual estimated products purchased</option>
+                    <option value="100000">> $100,000/yr</option>
+                    <option value="10000000">> $1,000,000/yr</option>
+                    <option value="50000000">> $5,000,000/yr</option>
+                    <option value="100000000">> $10,000,000/yr</option>
                 </select>
               </div>
             </div>

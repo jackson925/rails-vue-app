@@ -12,21 +12,17 @@ class UsersController < ApplicationController
 
   # GET /users/reset
   def reset
-    @user = User.new
+    # @user = User.new
   end
 
   # GET /users/login
   def login
-    @user = User.new
+    # @user = User.new
   end
-
-  # # GET /users/1 or /users/1.json
-  # def show
-  # end
 
   # GET /users/new
   def new
-    @user = User.new
+    @user = User.new({})
   end
 
 
@@ -37,6 +33,7 @@ class UsersController < ApplicationController
 
   # POST /users or /users.json
   def create
+    logger.info user_params
     @user = User.new(user_params)
 
     respond_to do |format|

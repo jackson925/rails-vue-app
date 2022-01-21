@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  # get 'users/authenticate'
   get 'users/reset', to: 'users#reset'
   get 'users/login', to: 'users#login'
   devise_for :users, controllers: { sessions: "sessions" }
